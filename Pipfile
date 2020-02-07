@@ -9,7 +9,7 @@ verify_ssl = true
 django = "*"
 psycopg2-binary = "*"
 django-extensions = "*"
-djangorestframeworkpipenv = "*"
+djangorestframework= "*"
 gunicorn = "*"
 django-heroku = "*"
 
