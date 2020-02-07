@@ -4,13 +4,13 @@ from .serializers import RepairSerializer, BicycleSerializer, OrderSerializer
 from .models import Repairs, Bicycle, Order
 
 class RepairsView(viewsets.ModelViewSet):
-    queryset = Repairs.object.all()
+    queryset = Repairs.objects.all()
     serializer_class = RepairSerializer
 
 class BicycleView(viewsets.ModelViewSet):
-    queryset = Bicycle.object.all()
+    queryset = Bicycle.objects.all()
     serializer_class = BicycleSerializer
 
 class OrderView(viewsets.ModelViewSet):
-    queryset = Order.object.all()
+    queryset = Order.objects.all()
     serializer_class = OrderSerializer
