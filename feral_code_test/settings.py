@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'feral_code_test.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'sample_database',
-        'USER': 'sample',
-        'PASSWORD': 'sample',
+        'NAME': 'bike_repair',
+        'USER': 'admin_of_repair_shop',
+        'PASSWORD': 'repair-admin',
         'HOST': 'localhost'
     }
 }
