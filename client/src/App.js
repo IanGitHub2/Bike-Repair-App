@@ -1,14 +1,16 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
+import CreateOrderForm from './components/CreateOrderForm'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      {/* <Route>
+      <Router>
         <Switch>
+          <Route exact path="/create-order" component={CreateOrderForm}/>
         </Switch>
-      </Route> */}
+      </Router>
       <p>Hi</p>
     </div>
   );
