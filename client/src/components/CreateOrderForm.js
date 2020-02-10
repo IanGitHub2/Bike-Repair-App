@@ -29,7 +29,7 @@ export default class CreateOrderForm extends React.Component {
 
     formSubmit = (event) => {
         event.preventDefault()
-        axios.post('/api/post/', this.state.newOrder)
+        axios.post('/api/v1/order/', this.state.newOrder)
           .then(() => {
               this.setState({ redirect: true })
           })
