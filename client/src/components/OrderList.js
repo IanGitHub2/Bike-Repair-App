@@ -4,7 +4,15 @@
  export default class OrderList extends React.Component {
      render(){
          return(
-             <div></div>
+             <div>
+                 {this.props.orderList.map((order, i) => {
+                     return(
+                         <div>
+                             <div>{order.order_name}</div>
+                         </div>
+                     )
+                 })}
+             </div>
          )
      }
  }
