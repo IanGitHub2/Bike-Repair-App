@@ -2,16 +2,15 @@ import React from 'react'
 import axios from 'axios'
 import {Redirect} from 'react-router-dom'
 
-const newRepair = {
-    name: '',
-    description: '',
-    repair_time: '',
-    repair_price: 0
-}
 
 export default class CreateRepairForm extends React.Component {
     state = {
-        newRepair: {...newRepair}
+        newRepair: {
+        name: '',
+        description: '',
+        repair_time: '',
+        repair_price: 0
+        }
     }
 
     handleChanges = (event) => {
@@ -26,7 +25,7 @@ export default class CreateRepairForm extends React.Component {
 
     formSubmit = (event) => {
         event.preventDefault()
-        axios.post('/api/v1/repairs', this.state.newRepair)
+        axios.POST('/api/v1/repairs/', this.state.newRepair)
           .then(() => {
               this.setState({ redirect: true })
           })
@@ -51,6 +50,7 @@ export default class CreateRepairForm extends React.Component {
                           type="text"
                           name="description"
                           value={this.state.newRepair.description}
+                          onChange={this.handleChanges}
                           placeholder="info about part."/>
                     </div>
                     <div>
@@ -58,6 +58,7 @@ export default class CreateRepairForm extends React.Component {
                           type="text"
                           name="repair_time"
                           value={this.state.newRepair.repair_time}
+                          onChange={this.handleChanges}
                           placeholder="how long"/>
                     </div>
                     <div>
@@ -65,8 +66,10 @@ export default class CreateRepairForm extends React.Component {
                           type="DecimalField"
                           name="repair_price"
                           value={this.state.newRepair.repair_price}
+                          onChange={this.handleChanges}
                           placeholder="cost?"/>
                     </div>
+                    <input type="submit" value="Add"/>
                 </form>
             </div>
         )

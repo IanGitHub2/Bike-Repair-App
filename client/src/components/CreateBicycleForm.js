@@ -70,6 +70,7 @@ export default class CreateBicycleForm extends React.Component {
                           onChange={this.handleChanges}
                           placeholder="price ?"/>
                     </div>
+                    <input type="submit" value="Add"/>
                 </form>
             </div>
         )
