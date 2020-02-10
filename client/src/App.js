@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
 import CreateOrderForm from './components/CreateOrderForm'
 import './App.css';
 import CreateRepairForm from './components/CreateRepairForm';
+import CreateBicycleForm from './components/CreateBicycleForm';
 
 function App() {
   return (
