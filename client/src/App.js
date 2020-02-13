@@ -17,7 +17,6 @@ function App() {
           <Route exact path="/create-bicycle" component={CreateBicycleForm}/>
         </Switch>
       </Router>
-      <p>Hi</p>
     </div>
   );
 }

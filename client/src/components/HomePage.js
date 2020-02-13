@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import OrderList from './OrderList'
+import './Home.css'
 
 export default class HomePage extends React.Component {
     state = {
