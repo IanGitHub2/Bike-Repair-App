@@ -117,6 +117,7 @@ export default class CreateOrderForm extends React.Component {
                       return <option>{bike.name}</option>
                   })}
               </select>
+              {/* i'm guessing now i need to add on click that save the id to state */}
           </div>
           <input type="submit" value="Order" />
         </form>
