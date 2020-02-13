@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import {Redirect} from 'react-router-dom'
+// import {Redirect} from 'react-router-dom'
 
 
 export default class CreateRepairForm extends React.Component {
@@ -11,6 +11,10 @@ export default class CreateRepairForm extends React.Component {
         repair_time: '',
         repair_price: 0
         }
+    }
+
+    componentDidMount(){
+        console.log('CreateRepairForm mounted')
     }
 
     handleChanges = (event) => {
@@ -24,19 +28,18 @@ export default class CreateRepairForm extends React.Component {
     }
 
     formSubmit = (event) => {
+        console.log('onForm submit')
         event.preventDefault()
-        axios.POST('/api/v1/repairs/', this.state.newRepair)
-          .then(() => {
-              this.setState({ redirect: true })
-          })
+        axios.post('/api/v1/repairs/', this.state.newRepair)
+    
     }
 
     render() {
         return (
             <div>
                 <h1>Add a repair</h1>
-                <form>
-                {this.state.redirect === true ? <Redirect to='/' /> : null}
+                <form onSubmit={this.formSubmit}>
+                {/* {this.state.redirect === true ? <Redirect to='/' /> : null} */}
                     <div>
                         <input
                           type="text"

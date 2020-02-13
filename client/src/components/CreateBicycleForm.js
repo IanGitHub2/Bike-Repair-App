@@ -1,17 +1,15 @@
 import React from 'react'
 import axios from 'axios'
-import {Redirect} from 'react-router-dom'
-
-const newBicycle = {
-    name: '',
-    image_url: '',
-    repair_time: '',
-    repair_price: 0
-}
+// import {Redirect} from 'react-router-dom'
 
 export default class CreateBicycleForm extends React.Component {
     state = {
-        newBicycle: {...newBicycle}
+       newBicycle: {
+        name: '',
+        image_url: '',
+        repair_time: '',
+        repair_price: 0
+       }
     }
 
     handleChanges = (event) => {
@@ -27,17 +25,14 @@ export default class CreateBicycleForm extends React.Component {
     formSubmit = (event) => {
         event.preventDefault()
         axios.post('/api/v1/bicycle/', this.state.newBicycle)
-          .then(() => {
-              this.setState({ redirect: true })
-          })
     }
 
     render(){
         return(
             <div>
                 <h1>Add new bicycle</h1>
-                <form>
-                {this.state.redirect === true ? <Redirect to='/'/> : null}
+                <form onSubmit={this.formSubmit}>
+                {/* {this.state.redirect === true ? <Redirect to='/'/> : null} */}
                     <div>
                         <input
                           type="text"

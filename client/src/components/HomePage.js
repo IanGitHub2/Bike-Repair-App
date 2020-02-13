@@ -19,7 +19,7 @@ export default class HomePage extends React.Component {
     }
 
     componentDidMount(){
-        axios.get('/api/v1/post')
+        axios.get('/api/v1/get')
         .then((res) => {
             this.setState({ orderList: res.data })
         })
