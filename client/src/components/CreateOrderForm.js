@@ -48,6 +48,9 @@ export default class CreateOrderForm extends React.Component {
     axios.get("/api/v1/repairs/").then(res => {
       this.setState({ repairOptions: res.data });
     });
+    axios.get("/api/v1/bicycle/").then(res => {
+        this.setState({ bicycleOptions: res.data });
+      });
   }
 
   render() {
@@ -103,10 +106,17 @@ export default class CreateOrderForm extends React.Component {
           </div>
           <div>
             <select>
-              {this.state.repairOptions.map((order, i) => {
-                return <option>{order.name}</option>;
+              {this.state.repairOptions.map((repair, i) => {
+                return <option>{repair.name}</option>;
               })}
             </select>
+          </div>
+          <div>
+              <select>
+                  {this.state.bicycleOptions.map((bike, i) => {
+                      return <option>{bike.name}</option>
+                  })}
+              </select>
           </div>
           <input type="submit" value="Order" />
         </form>
