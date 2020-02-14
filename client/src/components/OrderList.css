@@ -1,9 +1,13 @@
 .order-housing {
+    display: flex;
     border: black solid 2px;
-    margin: 0px 12em;
+    margin: 0px 10em;
 }
 
 .order-name-date{
     font-size: 2em;
-    margin: 4px auto;
+    margin: 1em 2em;
+    padding: 1em 2em;
+    border-radius: 10px;
+    border: black solid 1px;
 }
