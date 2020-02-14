@@ -29,7 +29,7 @@ export default class HomePage extends React.Component {
     render(){
         return(
             <div>
-                <div class="image-home-banner">
+                <div class="image-home-banner" id="home-wrapper">
                         <img src="https://images.unsplash.com/photo-1556316384-12c35d30afa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="bicycle" width="650" height="400"/>
                     </div>
                     <div>

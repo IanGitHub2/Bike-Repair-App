@@ -1,5 +1,9 @@
-.home-header1 {
+.home-wrapper {
     display: flex;
+    position: relative;
+}
+
+.home-header1 {
     font-size: 4em;
     margin: 0px 0px;
 }
@@ -12,6 +16,5 @@
 }
 
 .image-home-banner {
-    display: flex;
     margin: 0px 0px;
 }
