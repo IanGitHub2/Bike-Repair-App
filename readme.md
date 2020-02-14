@@ -15,7 +15,7 @@
 ### Home Page
 The home page let the user view the current order's in front of them and the order they just placed. The user cann also create a new order with the bicycle and the repairs needed.
 
-### Creating 
+### Created with: 
 - Javascript
 - React
 - Python

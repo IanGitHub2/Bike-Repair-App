@@ -1,11 +1,18 @@
-.home-wrapper {
-    display: flex;
-    position: relative;
+#home-wrapper {
+    border: black solid 2px;
+    margin-bottom: 400px;
 }
 
 .home-header1 {
-    font-size: 4em;
     margin: 0px 0px;
+    font-size: 4em;
+}
+
+.image-home-banner {
+    float: left;
+    margin: 0px 0px;
+    max-width: 600px;
+    max-height: 450px;
 }
 
 .home-create-button {
@@ -15,6 +22,6 @@
     border-radius: 10px;
 }
 
-.image-home-banner {
-    margin: 0px 0px;
+.oder-list {
+    margin: 0px auto;
 }
