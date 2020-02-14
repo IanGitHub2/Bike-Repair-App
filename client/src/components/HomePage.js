@@ -35,7 +35,7 @@ export default class HomePage extends React.Component {
                         <h1 class="home-header1">Place and order</h1>
                     </div>
                 </div>
-                <div>
+                <div class="home-create-button-housing">
                     <Link to={`/create-order`}>
                         <button class="home-create-button">Place Order</button>
                     </Link>

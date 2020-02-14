@@ -1,11 +1,13 @@
 #home-wrapper {
     border: black solid 2px;
-    margin-bottom: 400px;
+    margin-bottom: 3em;
 }
 
 .home-header1 {
     margin: 0px 0px;
+    padding: 10.063rem 0px;
     font-size: 4em;
+    text-align: center;
 }
 
 .image-home-banner {
@@ -13,6 +15,10 @@
     margin: 0px 0px;
     max-width: 600px;
     max-height: 450px;
+}
+
+.home-create-button-housing {
+    text-align: center;
 }
 
 .home-create-button {
@@ -23,5 +29,5 @@
 }
 
 .oder-list {
-    margin: 0px auto;
+    margin: 3em auto 0px auto;
 }
