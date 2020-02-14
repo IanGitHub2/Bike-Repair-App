@@ -30,7 +30,7 @@ export default class HomePage extends React.Component {
         return(
             <div>
                 <div>
-                    <img src="client/bicycle-background-home.jpeg" alt="bicycle"></img>
+                    <img src="client/src/bicycle-background-home.jpeg" alt="bicycle"/>
                     <h1 class="home-header1">Place and order</h1>
                     <Link to={`/create-order`}>
                         <button class="home-create-button">Place Order</button>

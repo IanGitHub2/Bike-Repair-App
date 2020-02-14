@@ -2,3 +2,8 @@
     border: black solid 2px;
     margin: 0px 12em;
 }
+
+.order-name-date{
+    font-size: 2em;
+    margin: 4px auto;
+}
