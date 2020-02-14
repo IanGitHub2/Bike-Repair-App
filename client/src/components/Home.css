@@ -1,6 +1,7 @@
 .home-header1 {
+    display: flex;
     font-size: 4em;
-    margin: 0 auto;
+    margin: 0px 0px;
 }
 
 .home-create-button {
@@ -8,4 +9,9 @@
     margin: 0em 2em;
     background-color: aqua;
     border-radius: 10px;
+}
+
+.image-home-banner {
+    display: flex;
+    margin: 0px 0px;
 }

@@ -29,9 +29,13 @@ export default class HomePage extends React.Component {
     render(){
         return(
             <div>
+                <div class="image-home-banner">
+                        <img src="https://images.unsplash.com/photo-1556316384-12c35d30afa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="bicycle" width="650" height="400"/>
+                    </div>
+                    <div>
+                        <h1 class="home-header1">Place and order</h1>
+                    </div>
                 <div>
-                    <img src="client/src/bicycle-background-home.jpeg" alt="bicycle"/>
-                    <h1 class="home-header1">Place and order</h1>
                     <Link to={`/create-order`}>
                         <button class="home-create-button">Place Order</button>
                     </Link>
