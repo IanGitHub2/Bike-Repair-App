@@ -1,0 +1,11 @@
+.home-header1 {
+    font-size: 4em;
+    margin: 0 auto;
+}
+
+.home-create-button {
+    font-size: 2em;
+    margin: 0em 2em;
+    background-color: aqua;
+    border-radius: 10px;
+}

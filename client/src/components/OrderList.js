@@ -1,12 +1,12 @@
  import React from 'react'
-//  import axios from 'axios'
-//  import { Link } from 'react-router-dom'
+ import './OrderList.css'
 
  export default class OrderList extends React.Component {
 
      render(){
          return(
              <div>
+                <div class="order-housing">
                  {this.props.orderList.map((order, i) => {
                      return(
                          <div>
@@ -14,6 +14,7 @@
                          </div>
                      )
                  })}
+                 </div>
              </div>
          )
      }
