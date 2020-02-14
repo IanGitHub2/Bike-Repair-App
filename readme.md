@@ -6,10 +6,10 @@
 - [Heroku.ish](https://feral-test01.herokuapp.com/)
 
 # WireFrame
-![WireFrame](https://photos.google.com/photo/AF1QipPY6AHhmT-d2-AQXx4J-Ee3lURWOyFSVadLS4aK)
+![WireFrame](20200214_010542.jpg)
 
 # ERD
-![ERD](https://photos.google.com/photo/AF1QipNChQdPLyVrYYgFlKoURvat75KmS6eFrjkkMHxt)
+![ERD](20200214_010328.jpg)
 
 # Over View
 ### Home Page
