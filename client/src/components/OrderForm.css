@@ -1,0 +1,14 @@
+.order-form-header {
+    text-align: center;
+    font-size: 3em;
+}
+
+#form-housing {
+    border: black solid 2px;
+    margin: 2em 12em;
+}
+
+#form-input {
+    display: inline-block;
+    margin: 1em 1rem;
+}

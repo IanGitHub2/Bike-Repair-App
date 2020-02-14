@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
+import './OrderForm.css'
 
 const newOrder = {
   pick_date: "",
@@ -27,20 +28,21 @@ export default class CreateOrderForm extends React.Component {
     newOrder: { ...newOrder }
   };
  
-
   handleChanges = event => {
     const newValue = event.target.value;
     const field = event.target.name;
 
     const newState = { ...this.state };
     newState.newOrder[field] = newValue;
-
+    console.log('newState', newState)
     this.setState(newState);
   };
 
   formSubmit = event => {
     event.preventDefault();
-    axios.post("/api/v1/order/", this.state.newOrder).then(() => {
+    const copiedState = {...this.state.newOrder}
+    copiedState.repair = [copiedState.repair]
+    axios.post("/api/v1/order/", copiedState).then(() => {
       this.setState({ redirect: true });
     });
   };
@@ -56,10 +58,10 @@ export default class CreateOrderForm extends React.Component {
   render() {
     return (
       <div>
-        <h1>Fill out order form please</h1>
-        <form>
-          {this.state.redirect === true ? <Redirect to="/" /> : null}
-          <div>
+        <h1 class="order-form-header">Fill out order form please</h1>
+        <form onSubmit={this.formSubmit} id="form-housing">
+          {this.state.redirect === true ? <Redirect to="/home-page" /> : null}
+          <div id="form-input">
             <input
               type="text"
               name="pick_date"
@@ -68,7 +70,7 @@ export default class CreateOrderForm extends React.Component {
               placeholder="What day?"
             />
           </div>
-          <div>
+          <div id="form-input">
             <input
               type="text"
               name="order_name"
@@ -77,7 +79,7 @@ export default class CreateOrderForm extends React.Component {
               placeholder="Place name of order"
             />
           </div>
-          <div>
+          <div id="form-input">
             <input
               type="text"
               name="phone_number"
@@ -86,7 +88,7 @@ export default class CreateOrderForm extends React.Component {
               placeholder="Phone Number ?"
             />
           </div>
-          <div>
+          <div id="form-input">
             <input
               type="text"
               name="email"
@@ -95,7 +97,7 @@ export default class CreateOrderForm extends React.Component {
               placeholder="Email ?"
             />
           </div>
-          <div>
+          <div id="form-input">
             <input
               type="text"
               name="special_request"
@@ -104,17 +106,24 @@ export default class CreateOrderForm extends React.Component {
               placeholder="Special Request ?"
             />
           </div>
-          <div>
-            <select>
+          <div id="form-input">
+            <label>Repair</label>
+            <select  value={this.state.repair} onChange={this.handleChanges} name="repair">
               {this.state.repairOptions.map((repair, i) => {
-                return <option>{repair.name}</option>;
+                return <option
+                  name="repair"
+                  value={repair.id} >{repair.name}</option>;
               })}
             </select>
           </div>
-          <div>
-              <select>
+          <div id="form-input">
+            <label>Bicycle</label>
+              <select value={this.state.bicycle} onChange={this.handleChanges} name="bicycle">
                   {this.state.bicycleOptions.map((bike, i) => {
-                      return <option>{bike.name}</option>
+                      return <option
+                        value={bike.id}>
+                          {bike.name}
+                        </option>
                   })}
               </select>
               {/* i'm guessing now i need to add on click that save the id to state */}
