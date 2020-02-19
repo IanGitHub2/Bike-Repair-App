@@ -1,5 +1,5 @@
 .order-housing {
-    display: flex;
+    display: inline-flexbox;
     border: black solid 2px;
     margin: 0px 10em;
 }

@@ -9,8 +9,11 @@
                 <div class="order-housing">
                  {this.props.orderList.map((order, i) => {
                      return(
-                         <div>
-                             <div class="order-name-date">{order.order_name}, {order.pick_date}</div>
+                         <div class="order-name-date">
+                             <div>Name: {order.order_name},</div>
+                             <div>Drop off: {order.pick_date},</div>
+                             <div>Bicycle: {order.bicycle},</div>
+                             <div>Special request: {order.special_request}</div>
                          </div>
                      )
                  })}
