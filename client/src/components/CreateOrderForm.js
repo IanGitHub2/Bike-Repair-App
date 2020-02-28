@@ -60,7 +60,7 @@ export default class CreateOrderForm extends React.Component {
       <div>
         <h1 class="order-form-header">Fill out order form please</h1>
         <form onSubmit={this.formSubmit} id="form-housing">
-          {this.state.redirect === true ? <Redirect to="/home-page" /> : null}
+          {this.state.redirect === true ? <Redirect to="/" /> : null}
           <div id="form-input">
             <input
               type="text"
