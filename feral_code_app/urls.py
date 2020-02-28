@@ -9,5 +9,5 @@ router.register('bicycle', views.BicycleView)
 router.register('order', views.OrderView)
 
 urlpatterns = [
-    path('',include(router.urls))
+    path('/',include(router.urls))
 ]
